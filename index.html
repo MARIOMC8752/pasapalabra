@@ -392,7 +392,6 @@ function updateTimerDisplay() {
 }
 
 function endGame() {
-    alert(`¡Tiempo terminado!\nAciertos: ${correctAnswers}\nFallos: ${incorrectAnswers}`);
     document.getElementById('answer').disabled = true;
     const buttons = document.querySelectorAll('button');
     buttons.forEach(button => {
