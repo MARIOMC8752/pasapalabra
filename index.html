@@ -429,7 +429,6 @@ function isGameComplete() {
     
     if (allAnswered) {
         clearInterval(timerInterval);
-        alert(`¡Juego completado!\nAciertos: ${correctAnswers}\nFallos: ${incorrectAnswers}`);
         goToFirstPassed();
     }
     return allAnswered;
