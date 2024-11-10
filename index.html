@@ -273,9 +273,6 @@ Z,Zoología,Ciencia que estudia los animales</textarea>
             <button onclick="passTurn()">Pasar</button>
         </div>
         <div id="score">Aciertos: 0 - Fallos: 0</div>
-        <div id="audio-controls">
-            <button onclick="toggleSoundEffects()" id="sfxToggle">🔇 Efectos</button>
-        </div>
     </div>
 
 <script>
@@ -295,10 +292,10 @@ const gameAudio = {
 
 function initAudio() {
     const audioSources = {
-        background: 'fondo pasapalabra.png',
-        correct: 'https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-600.mp3',
-        incorrect: 'https://assets.mixkit.co/sfx/preview/mixkit-wrong-answer-fail-notification-946.mp3',
-        victory: 'https://assets.mixkit.co/sfx/preview/mixkit-winning-chimes-2015.mp3'
+        background: '',
+        correct: '',
+        incorrect: '',
+        victory: ''
     };
 
     for (const [key, audio] of Object.entries(gameAudio)) {
@@ -515,12 +512,6 @@ function toggleMusic() {
         gameAudio.background.pause();
         btn.innerHTML = '🔇 Música';
     }
-}
-
-function toggleSoundEffects() {
-    sfxEnabled = !sfxEnabled;
-    const btn = document.getElementById('sfxToggle');
-    btn.innerHTML = sfxEnabled ? '🔊 Efectos' : '🔇 Efectos';
 }
 
 function updateGame() {
